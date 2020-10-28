@@ -1,0 +1,40 @@
+<div class="container text-center mt-5">
+    <div class="mx-auto mt-4 user-form">
+        <h6 class="text-muted">Register Yourself</h6>
+        <div class="m-4">
+            <form>
+                <div class="form-group w-50 mx-auto">
+                    <input type="text" class="form-control userInput" placeholder="First Name" name="firstName"
+                    [(ngModel)]="firstName"/>
+                </div>
+                <div class="form-group w-50 mx-auto">
+                    <input type="text" class="form-control userInput" placeholder="Last Name" name="lastName"
+                    [(ngModel)]="lastName" />
+                </div>
+                <div class="form-group w-50 mx-auto">
+                    <input type="number" class="form-control userInput" placeholder="Mobile No." name="mobile"
+                    [(ngModel)]="mobile" />
+                </div>
+                <div class="form-group w-50 mx-auto">
+                    <input type="email" class="form-control userInput" placeholder="Email" name="email" [(ngModel)]="email"/>
+                </div>
+                <div class="form-group w-50 mx-auto">
+                    <input type="password" class="form-control userInput" name="Password" placeholder="Password"
+                    [(ngModel)]="password"  />
+                </div>
+                <div class="form-group w-50 mx-auto">
+                    <input type="password" class="form-control userInput" name="confirmPassword" placeholder="Confirm Password"
+                    [(ngModel)]="confirmPassword"   />
+                </div>
+                <div class="button-section">
+                    <button type="button" class="btn btn-success btn-sm mx-3" (click)="onRegister()" *ngIf="!update">
+                        Register
+                    </button>
+                    <button type="button" class="btn btn-success btn-sm mx-3" (click)="onUpdate()" *ngIf="update">
+                        Submit
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
